@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: rgb(215, 8, 5);
+    background: linear-gradient(122deg, rgba(215, 8, 5, 1) 0%, rgba(252, 176, 67, 1) 63%, #1a96a7 100%, rgba(40, 122, 250, 1) 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#big-box {
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+#nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#ps-logo {
+    width: 50px;
+    margin: 30px 0;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.nav-link {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #1a96a7;
+}
+
+#med-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+#product-info {
+    margin-left: 50px;
+    position: relative;
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+#product-info p {
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+
+#product-info ::before {
+    content: "";
+    width: 10px;
+    height: 57%;
+    background: rgb(238, 79, 0);
+    background: linear-gradient(90deg, rgba(238, 79, 0, 1) 33%, rgba(215, 5, 5, 1) 100%);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+    border-radius: 6px;
+}
+
+h4 {
+    font-size: 20px;
+    color: black;
+    margin: 30px 0;
+}
+
+#buy-button {
+    width: 140px;
+    border: none;
+    padding: 12px 10px;
+    outline: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 2;
+    background: rgb(238, 79, 0);
+    background: linear-gradient(90deg, rgba(238, 79, 0, 1) 33%, rgba(215, 5, 5, 1) 100%);
+}
+
+#buy-button:hover{
+    background: #1aa788;
+}
+
+#add-cart {
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#add-cart img {
+    height: 45px;
+    width: 45px;
+    height: 100%;
+    width: 100%;
+}
+
+#product-img {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#controller {
+    width: 90%;
+    z-index: 2;
+    animation: movecontroller 2.5s infinite alternate ease-in-out;
+}
+ 
+#color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgb(238, 79, 0);
+    background: linear-gradient(90deg, rgba(238, 79, 0, 1) 33%, rgba(215, 5, 5, 1) 100%);
+    height: 100%;
+    width: 80%;
+    border-radius: 20px 0 0 20px;
+    z-index: 1;
+    transform: translateX(150px);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#social-links i {
+    height: 25px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+#social-links i:hover {
+    scale: 1.2;
+}
+
+#botao-menu {
+    width: 25px;
+    margin-right: 15px;
+    display: none;
+    cursor: pointer;
+}
+
+
+@media(max-width: 764px) {
+
+    #big-box {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        overflow-y: auto;
+    }
+
+    #med-box {
+        flex-direction: column-reverse;
+    }
+
+    #color-box{
+        transform: translateX(75px);
+    }
+   
+    #product-img {
+        margin-bottom: 30px;
+    }
+
+    #menu-list {
+        position: relative;
+        top: 60px;
+        left: 60px;
+        overflow: hidden;
+        transition: all 0.8s ease-in-out;
+    }
+
+    #buy-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    #botao-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-li {
+        display: block;
+        margin-top: 4px;
+    }
+
+}
+
+@keyframes movecontroller {
+    from {
+        transform: translate(-5%, -5%) rotate(-5deg);
+    }
+}
